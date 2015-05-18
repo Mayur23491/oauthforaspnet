@@ -8,10 +8,24 @@ layout: default
 	</header>
   <div class="row">
 	<div class="col-md-8 provider-info">
+	    {% if page.video %}
+		<div class="row" style="margin-bottom: 30px;">
+			<div class="col-lg-8">
+		    	<a class="btn btn-large btn-primary btn-embossed btn-block" target="_blank" href={{ page.video }}>
+		    	<span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp;&nbsp;Watch a step-by-step video
+		    	</a>
+			</div>
+		</div>
+	    {% endif %}
+
 	    {% if page.guide %}
-	    	<a class="btn btn-large btn-success btn-embossed" href={{ page.guide }}>
-	    	<span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;&nbsp;Read the step-by-step Walkthrough Guide
-	    	</a>
+		<div class="row" style="margin-bottom: 30px;">
+			<div class="col-lg-8">
+		    	<a class="btn btn-large btn-success btn-embossed btn-block" href={{ page.guide }}>
+		    	<span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;&nbsp;Read the step-by-step Walkthrough Guide
+		    	</a>
+			</div>
+		</div>
 	    {% endif %}
 
 		{{ content }}
